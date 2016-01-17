@@ -1,0 +1,41 @@
+@import 'normalizes';
+@import 'base';
+@import 'mixins';
+@import 'var';
+@import 'grid';
+@import 'type';
+@import 'buttons';
+@import 'forms';
+
+
+.section {
+	padding-bottom: 100px;
+	margin-bottom: 100px;
+	border-bottom: 	1px solid rgba(158,174,179, 0.2);
+	@extend .container;
+}
+
+.jumbotron {
+	background-color: $brand-2;
+	color: #fff;
+}
+.show-grid div{
+    padding-top: 10px;
+    padding-bottom: 10px;
+	border: 1px $brand-1 solid;  
+	border-radius: 3px;
+	color: #777;
+	text-align: center;
+	letter-spacing: 0.05rem;
+}
+
+    // border: 1px solid #ccc;
+    // border-radius: 4px;
+    // padding-top: 10px;
+    // padding-bottom: 10px;
+    // color: #555;
+    // text-align: center;
+    // font-size: 11px;
+    // font-weight: 800;
+    // letter-spacing: .1rem;
+    // text-transform: uppercase;

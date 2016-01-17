@@ -1,0 +1,48 @@
+$btn-bgcs: (
+	normal: #1D9371,
+	// normal: #008287,
+	// normal: #00B6AC,
+	alert: #b6000a,
+	// alert: #E5BD0B,
+	secondary: #0a3e4b,
+	good: #07944A
+);
+// $btn-bgcs: (
+// 	normal: #008287,
+// 	// normal: #00B6AC,
+// 	alert: #b6000a,
+// 	// alert: #E5BD0B,
+// 	secondary: #06393B,
+// 	good: #008748
+// );
+
+$btn-radius: 4px;
+$alpha: .5;
+$perrcentage: 10%;
+$light-black: tint(#000, 10);
+.btn {
+	height: 40px;
+    width: 150px;		
+	padding: 10px 10px;
+	display: block-inline;
+	// border-bottom: 2px rgba(0,0,0, $alpha) solid;
+	border: none;
+	color: #fff;
+	border-radius: $btn-radius;
+	margin-right: 20px;
+	&:hover{
+		opacity: 0.95;
+		border-bottom: 2px rgba(0,0,0, $alpha) solid;
+	}
+	&:active{
+		color: tint(#BADA55, 42%);
+	}
+}
+@each $name, $btn-bgc in $btn-bgcs {
+	.buttons--#{$name} {
+		background-color: $btn-bgc;
+	}
+}
+// .buttons--alert {
+// 	color: #333;
+// }

@@ -1,0 +1,108 @@
+$disabled-bb: #9eaeb3;
+$disabled-bgc: #c4ced1;
+$error-state: #b6000a;
+$brand-1: #008287;
+$brand-2: #0a3e4b;
+$brand-good: #008748;
+$input-states: (
+	normal: #008287,
+	alert: #b6000a,
+	secondary: #0a3e4b,
+	good: #008748
+);
+$DarkBrown: #292321;
+
+$Orange: #CC3300;
+.input {
+    height: 60px;
+    border: none;
+    border-bottom: 1px #e1e6e8 solid;
+    margin-right: 5px;
+    margin-bottom: 20px;
+    &:focus {
+    	outline: none;
+    	border-bottom-color: #00B6AC;
+    }
+}
+
+.input--error {
+	border-bottom-color: $error-state;
+	color: $error-state;
+	font-weight: 600;
+	&:focus {
+		border-bottom-color: $error-state;
+	}
+}
+
+.input--disabled {
+	background-color: $disabled-bgc;
+	border-bottom-color: $disabled-bb;
+}	
+
+.radio--error {
+	outline: $error-state;
+}
+
+label {
+    cursor: pointer;
+    position: relative;
+    padding-left: 25px;
+    margin-right: 15px;
+}
+
+[type="radio"] {
+  border: 0; 
+  clip: rect(0 0 0 0); 
+  height: 1px; margin: -1px; 
+  overflow: hidden; 
+  padding: 0; 
+  position: absolute; 
+  width: 1px;
+}
+
+/* One radio button per line */
+label {
+  display: block;
+  cursor: pointer;
+  line-height: 2.5;
+  font-size: 1.5em;
+}
+
+[type="radio"] + span {
+  display: block;
+}
+
+/* the basic, unchecked style */
+[type="radio"] + span:before {
+  content: '';
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.25em;
+  border-radius: 1em;
+  border: 0.125em solid #fff;
+  box-shadow: 0 0 0 0.15em $brand-2;
+  margin-right: 0.75em;
+  transition: 0.5s ease all;
+}
+
+/* the checked style using the :checked pseudo class */
+[type="radio"]:checked + span:before {
+  background: $brand-good;
+  box-shadow: 0 0 0 0.25em $brand-2;
+}
+
+/* never forget focus styling */
+[type="radio"]:focus + span:after {
+  content: '\0020\03C8';
+  font-size: 1.5em;
+  line-height: 1;
+  vertical-align: -0.125em;
+  color: $brand-1;
+}
+
+
+
+.form--radio__inline {
+  display:  -webkit-box;
+}
